@@ -74,7 +74,7 @@ func Clean(line string, color bool) string {
 			}
 			continue
 		default:
-			if c == '\n' || c >= ' ' {
+			if c == '\n' || c >= ' ' || c == '\t' {
 				edit.Write([]byte{c})
 			}
 		}
